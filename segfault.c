@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <ucontext.h>
 
-void A(int a);
+void A_function(int a);
 void B(int b);
 void C_test(int c);
 void DebugBacktrace(unsigned int sn , siginfo_t  *si , void *ptr);
@@ -203,7 +203,7 @@ int main(int argc, char **argv)
 
     sigaction (SIGSEGV,&s,NULL);
 
-    A(1);
+    A_function(1);
     C_test(&a);
 
     return 0;
